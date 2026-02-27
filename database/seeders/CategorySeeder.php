@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Enum\Categories;
+use App\Enums\Categories;
 use App\Models\Category;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
