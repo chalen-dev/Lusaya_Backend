@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Enum\Categories;
+use App\Models\Category;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -19,7 +20,7 @@ class CategorySeeder extends Seeder
         }, Categories::cases());
 
         foreach ($categories as $category) {
-            DB::table('categories')->insertOrIgnore($category);
+            Category::create($category);
         }
     }
 }

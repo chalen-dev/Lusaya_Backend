@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -15,30 +16,30 @@ class PostSeeder extends Seeder
     {
         $posts = [
             [
-                'title' => 'Hellow',
-                'text' => 'Welcome here',
+                'title' => 'Hellow Sir',
+                'text' => 'Musta ang life?',
                 'category_id' => 2,
             ],
             [
-                'title' => 'Hi',
-                'text' => 'Welcome here',
+                'title' => 'Yap yap yap',
+                'text' => 'Whine whine whine',
                 'category_id' => 3,
             ],
             [
-                'title' => 'Musta',
-                'text' => 'Welcome here',
+                'title' => 'Life\'s good',
+                'text' => 'Bla bla bla bla bla',
                 'category_id' => 4,
             ],
             [
-                'title' => 'Yow',
-                'text' => 'Welcome here',
+                'title' => 'Lipsum',
+                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci odio, dignissim ut est a, eleifend tristique ipsum. Nulla facilisi. Praesent mollis varius turpis, vitae faucibus nibh. Nunc ex arcu, iaculis vitae lacinia in, iaculis non nulla. Ut sollicitudin ut sapien sed .',
                 'category_id' => 5,
             ],
 
         ];
 
         foreach ($posts as $post) {
-            DB::table('posts')->insertOrIgnore($post);
+            Post::create($post);
         }
     }
 }

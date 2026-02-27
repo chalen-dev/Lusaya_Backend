@@ -13,15 +13,19 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #03012E;
 }
 
+/*
 * {
     outline: 1px solid red;
+}
+*/
+* {
     list-style-type: none;
 }
 
 li{
-    text-align: center;
     overflow-wrap: break-word;
 }
 
@@ -53,3 +57,17 @@ textarea{
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
 }
+
+/*<weight>: Use a value from 100 to 900
+ <uniquifier>: Use a unique and descriptive class name
+
+ */
+.roboto-bold {
+             font-family: "Roboto", sans-serif;
+             font-optical-sizing: auto;
+             font-weight: 700;
+             font-style: normal;
+             font-variation-settings:
+                 "wdth" 100;
+         }
+
